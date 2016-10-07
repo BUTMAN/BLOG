@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/static/css/pure-min.css">
+    <link rel="stylesheet" href="/static/css/main.css">
+    <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="/static/js/weibo.js"></script>
+    <script type="text/javascript" src="/static/js/particles.js"></script>
+    <style>
+        #particles-js {
+            height: 100%;
+        }
+    </style>
+    <title>MidNight</title>
+</head>
+<body>
+    <div class="head clearfix">
+        <div class="left title">夜弄影</div>
+        <div class="left title2">的小苑</div>
+        <div class="right title2">
+            <span class="selected"><a href="/blog">主页</a></span>
+            <span><a href="/blog/blogs">博客</a></span>
+            <span><a href="/weibo">留言板</a></span>
+            <span><a href="/profile">用户</a></span>
+        </div>
+    </div>
+
+    <div id="particles-js">
+
+        <script>
+        /* source: https://github.com/VincentGarreau/particles.js */
+
+        particlesJS('particles-js', {
+            particles: {
+                color: '#fff',
+                shape: 'circle',
+                opacity: 1,
+                size: 2.5,
+                size_random: true,
+                nb: 100,
+                line_linked: {
+                    enable_auto: true,
+                    distance: 250,
+                    color: '#fff',
+                    opacity: 0.5,
+                    width: 1,
+                    condensed_mode: {
+                        enable: false,
+                        rotateX: 600,
+                        rotateY: 600
+                    }
+                },
+                anim: {
+                    enable: true,
+                    speed: 2
+                }
+            },
+            interactivity: {
+                enable: true,
+                mouse: {
+                    distance: 200
+                },
+                mode: 'grab'
+            },
+            retina_detect: true
+        });
+        </script>
+
+        <script type="text/javascript">
+            var bodyBgs = [];
+            bodyBgs[0] = "/static/images/bg1.jpg";
+            bodyBgs[1] = "/static/images/bg2.jpg";
+            bodyBgs[2] = "/static/images/bg3.jpg";
+            bodyBgs[3] = "/static/images/bg4.jpg";
+            bodyBgs[4] = "/static/images/bg5.jpg";
+            bodyBgs[5] = "/static/images/bg6.jpg";
+            bodyBgs[6] = "/static/images/bg7.jpg";
+            <!--bodyBgs[7] = "/static/images/bg8.jpg";-->
+            <!--bodyBgs[8] = "/static/images/bg9.jpg";-->
+            var randomBgIndex = Math.round( Math.random() * 6 );
+        //输出随机的背景图
+            document.write('<style>body{background:url(' + bodyBgs[randomBgIndex] + ') no-repeat 50% 0}</style>');
+        </script>
+    </div>
+
+    <div class="qmpl-blog" >
+        <div class="body gua-flex">
+            <div class="blog-content gua-3">
+                <p>
+                    国际管理应该在首页写一些什么欢迎观临之类的然后摇摇尾巴以示友好?hhhh
+                    <br>
+                    喜欢这些背景?
+                    <br>
+                    都送你.
+                    <br>
+                    <a href="http://p1.bqimg.com/575532/a29531555e763d14.jpg" class="picture">
+                        <img src='http://p1.bqimg.com/575532/a29531555e763d14t.jpg' class="pic">
+                    </a>
+                    <a href="http://p1.bqimg.com/575532/bde59c32088d4ad7.jpg" class="picture">
+                        <img src='http://p1.bqimg.com/575532/bde59c32088d4ad7t.jpg' class="pic">
+                    </a>
+                    <a href="http://p1.bqimg.com/575532/4e6431729cda2fbb.jpg" class="picture">
+                        <img src='http://p1.bqimg.com/575532/4e6431729cda2fbbt.jpg' class="pic">
+                    </a>
+                    <br>
+                    <a href="http://p1.bqimg.com/575532/621ad9776d1eadca.jpg" class="picture">
+                        <img src='http://p1.bqimg.com/575532/621ad9776d1eadcat.jpg' class="pic">
+                    </a>
+                    <a href="http://p1.bqimg.com/575532/c3bd84b84a45f892.jpg" class="picture">
+                        <img src='http://p1.bqimg.com/575532/c3bd84b84a45f892t.jpg' class="pic">
+                    </a>
+                    <a href="http://p1.bqimg.com/575532/1a10d7ef8b52b721.jpg" class="picture">
+                        <img src='http://p1.bqimg.com/575532/1a10d7ef8b52b721t.jpg' class="pic">
+                    </a>
+                    <br>
+                    <a href="http://p1.bqimg.com/575532/621ad9776d1eadca.jpg" class="picture">
+                        <img src='http://p1.bqimg.com/575532/2621afb8f40b5558t.jpg' class="pic">
+                    </a>
+                    <a href="http://p1.bqimg.com/575532/e7d20542880beb84.jpg" class="picture">
+                        <img src='http://p1.bqimg.com/575532/e7d20542880beb84t.jpg' class="pic">
+                    </a>
+                    <a href="http://p1.bqimg.com/575532/675458b1fa40b835.jpg" class="picture">
+                        <img src='http://p1.bqimg.com/575532/675458b1fa40b835t.jpg' class="pic">
+                    </a>
+
+
+
+                </p>
+            </div>
+            <div class="blog-sidebar gua-1">
+                <div class="bloger">
+                    <div class="yumi"><img src="/static/images/mine.jpg" class="mine"></div>
+                    <p>
+                        手洗衣服会死星人。
+                    <br>
+                        买买买癌晚期患者。
+                    <br>
+                        我！要！吃！肉！
+                </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/static/css/main.css">
+    <link rel="stylesheet" href="/static/css/pure-min.css">
+    <style>
+        body {
+            background-image: url(/static/images/login-bg1.jpg);
+            background-repeat: repeat-y;
+        }
+    </style>
+    <title>注册与登录</title>
+    <style>
+        body {
+            background-color: lightskyblue;
+        }
+        .background {
+            width: 60%;
+            margin: 200px auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="head clearfix">
+        <div class="left title">夜弄影</div>
+        <div class="left title2">的小苑</div>
+        <div class="right title2">
+            <span><a href="/blog">主页</a></span>
+            <span><a href="/blog/blogs">博客</a></span>
+            <span><a href="/weibo">留言板</a></span>
+            <span><a href="/profile">用户</a></span>
+        </div>
+    </div>
+
+    <div class="auth-position">
+        <div class="auth-main">
+            <form action="/user/login" method="post" class="pure-form">
+                <input name="username" type="text" placeholder="输入 name" style="padding: 2px;">
+                <input name="password" type="password" placeholder="输入 password" style="padding: 2px;">
+                <button class="pure-button pure-button-primary" style="padding: 2px;">登录</button>
+            </form>
+        </div>
+
+        <!--<div class="box user-box login-box">-->
+            <!--<form action="/user/register" method="post">-->
+                <!--<input name="username">-->
+                <!--<br>-->
+                <!--<input name="password">-->
+                <!--<button>注册</button>-->
+            <!--</form>-->
+        <!--</div>-->
+    </div>
+</body>
+</html>

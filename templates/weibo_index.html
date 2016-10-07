@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/static/css/pure-min.css">
+    <link rel="stylesheet" href="/static/css/main.css">
+    <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script>
+    <script src="/static/js/api.js"></script>
+    <script src="/static/js/weibo.js"></script>
+    <script type="text/javascript">
+            var bodyBgs = [];
+            bodyBgs[0] = "/static/images/bg1.jpg";
+            bodyBgs[1] = "/static/images/bg2.jpg";
+            bodyBgs[2] = "/static/images/bg3.jpg";
+            bodyBgs[3] = "/static/images/bg4.jpg";
+            bodyBgs[4] = "/static/images/bg5.jpg";
+            bodyBgs[5] = "/static/images/bg6.jpg";
+            bodyBgs[6] = "/static/images/bg7.jpg";
+            <!--bodyBgs[7] = "/static/images/bg8.jpg";-->
+            <!--bodyBgs[8] = "/static/images/bg9.jpg";-->
+            var randomBgIndex = Math.round( Math.random() * 6 );
+        //输出随机的背景图
+            document.write('<style>body{background:url(' + bodyBgs[randomBgIndex] + ') repeat 50% 0}</style>');
+    </script>
+    <title>MidNight</title>
+</head>
+<body>
+    <div class="head clearfix">
+        <div class="left title">夜弄影</div>
+        <div class="left title2">的小苑</div>
+        <div class="right title2">
+            <span><a href="/blog">主页</a></span>
+            <span><a href="/blog/blogs">博客</a></span>
+            <span class="selected"><a href="/weibo">留言板</a></span>
+            <span><a href="/profile">用户</a></span>
+        </div>
+    </div>
+
+        <div class="body-blogs" style="padding: 5px;margin-top: 15px;">
+            <div class="blog-input">
+                <div class="box add-box">
+                    <input id="id-input-weibo" name="weibo" class="blog-t" placeholder="Weibo">
+                    <br>
+                    <button id="id-button-weibo-add" class="button-blogs" type="submit">水一发！</button>
+                </div>
+            </div>
+            <div class="blogs-content weibo-container">
+            {% for t in weibos %}
+                <div class="blogs-cell weibo-cell" style="padding-top: 5px;">
+                    <img src="{{ t.avatar }}" class="avatar">
+                    <div class="right">
+                    <span class="">{{ t.created_time }}</span>
+                    <span class="">by: {{ t.name }}</span>
+                    </div>
+                    <div class="blogs-content">
+                        <span class="weibo-content">{{ t.weibo }}</span>
+                        <a href="#" class="right pylp" style="color: white;">评论({{ t.comments_num }})</a>
+                    </div>
+
+                    <button class="button-blogs weibo-delete" data-id="{{ t.id }}">删除</button>
+                    <button class="button-blogs weibo-edit" data-id="{{ t.id }}">编辑</button>
+                    <div class="xqgl hide">
+                        <br>
+                        <input class="profile-uuru" id="id-eidt-weibo" type="text" placeholder="eidt weibo" value="{{ t.weibo }}">
+                        <br>
+                        <button class="weibo-update button-blogs" data-id="{{ t.id }}">更改</button>
+                    </div>
+                    <div class="comment-div hide">
+                        <div class="">
+                        {% for c in t.comment %}
+                            <div class="">
+                                <img src="{{ c.avatar }}" class="avatar-s">
+                                <span class="">{{ c.comment }}</span>
+                                <span class="right">{{ c.created_time }}</span>
+                                <span class="right">by:{{ c.name }}</span>
+                            </div>
+                        {% endfor %}
+                        </div>
+                        <form action="/comment" method="post" class="comment-form">
+                            <input type="hidden" name="weibo_id" class="profile-uuru" value="{{ t.id }}">
+                            <input name="comment" class="profile-uuru" placeholder="Comment"  style="width: 50%;">
+                            <br>
+                            <button class="button-blogs"  style="margin: 2px;">发表</button>
+                        </form>
+                    </div>
+                </div>
+            {% endfor %}
+            </div>
+        </div>
+
+        <script type="text/javascript">
+            var bodyBgs = [];
+            bodyBgs[0] = "/static/images/bg1.jpg";
+            bodyBgs[1] = "/static/images/bg2.jpg";
+            bodyBgs[2] = "/static/images/bg3.jpg";
+            bodyBgs[3] = "/static/images/bg4.jpg";
+            bodyBgs[4] = "/static/images/bg6.jpg";
+            var randomBgIndex = Math.round( Math.random() * 4 );
+        //输出随机的背景图
+            document.write('<style>body{background:url(' + bodyBgs[randomBgIndex] + ') repeat-y 50% 0}</style>');
+        </script>
+</body>
+</html>
