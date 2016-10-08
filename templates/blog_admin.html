@@ -36,15 +36,15 @@
     </div>
 
     <div class="body-blogs">
-        <!--<div class="blog-input">-->
-            <!--<form action="/blog/add" method="post" style="padding-top: 5px;">-->
-                <!--<input name="title" class="blog-t" placeholder="Title">-->
-                <!--<br>-->
-                <!--<textarea name="content" class="blog-c" placeholder="Blog"></textarea>-->
-                <!--<br>-->
-                <!--<button class="button-blog-add button-blogs" type="submit" style="display: inline-block">发布博客</button>-->
-            <!--</form>-->
-        <!--</div>-->
+        <div class="blog-input">
+            <form action="/blog/add" method="post" style="padding-top: 5px;">
+                <input name="title" class="blog-t" placeholder="Title">
+                <br>
+                <textarea name="content" class="blog-c" placeholder="Blog"></textarea>
+                <br>
+                <button class="button-blog-add button-blogs" type="submit" style="display: inline-block">发布博客</button>
+            </form>
+        </div>
 
         <div class="blogs-content">
             {% for b in blogs %}

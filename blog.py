@@ -28,6 +28,20 @@ def index():
     return render_template('blog_index.html', blogs=blogs)
 
 
+@main.route('/admin')
+def admin():
+    u = current_user()
+    if u is None:
+        return redirect(url_for('user.login_view'))
+    blogs = Blog.query.order_by(Blog.id.desc()).all()
+    for i in blogs:
+        i.comment = i.comments()
+        for j in i.comment:
+            j.avatar = j.get_avatar()
+        i.comments_num = len(i.comment)
+    return render_template('blog_admin.html', blogs=blogs)
+
+
 @main.route('/blogs')
 def blogs():
     u = current_user()

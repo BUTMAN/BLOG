@@ -196,6 +196,17 @@ word-wrap:break-word;
 }
 
 .blogs-cell {
+    margin-bottom: 5px;
+}
+
+.blogs-cell+.blogs-cell {
+    border-top-style: solid;
+    border-top-width: 2px;
+    border-top-color: lightgray;
+    margin-bottom: 5px;
+}
+
+.weibos-cell {
     border-top-style: solid;
     border-top-width: 2px;
     border-top-color: lightgray;
