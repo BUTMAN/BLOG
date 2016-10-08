@@ -1,6 +1,7 @@
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 
+import random
 import time
 import json
 import datetime
@@ -119,6 +120,12 @@ class User(db.Model, ModelHelper):
         self.password = form.get('password', '')
         self.avatar = form.get('avatar', 'http://vip.cocode.cc/uploads/avatar/default.png')
         self.created_time = int(time.time())
+
+    def av(self):
+        a = random.uniform(1, 30)
+        a = int(a)
+        path = '/static/images/avatar ({}).jpg'.format(a)
+        return path
 
     def weibos(self):
         ws = Weibo.query.filter_by(user_id=self.id).all()

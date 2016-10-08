@@ -31,6 +31,8 @@ def login_view():
 def register():
     form = request.form
     u = User(form)
+    avatar = u.av()
+    u.avatar = avatar
     if u.valid():
         u.save()
     else:
