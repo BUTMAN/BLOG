@@ -122,8 +122,7 @@ class User(db.Model, ModelHelper):
         self.created_time = int(time.time())
 
     def av(self):
-        a = random.uniform(1, 30)
-        a = int(a)
+        a = random.randint(1, 30)
         path = '/static/images/avatar ({}).jpg'.format(a)
         return path
 
