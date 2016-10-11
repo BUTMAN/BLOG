@@ -11,7 +11,7 @@ var weiboTemplate = function(weibo) {
             <span class="">${ w.created_time }</span>
             <span class="">by: ${ w.name }</span>
             </div>
-            <div class="blog-content">
+            <div class="blogs-content">
                 <span class="weibo-content">${ w.weibo }</span>
                 <a href="#" class="right pylp" style="color: white;">评论(${ w.comments_num })</a>
             </div>
